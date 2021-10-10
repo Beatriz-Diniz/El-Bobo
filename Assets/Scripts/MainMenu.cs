@@ -6,10 +6,20 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject deathOptions;
+    private AudioManager audioManager;
+
+    void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     public void PlayGame ()
-    {        
-        //Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);   
+    {
+        //Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity); 
+        // Stop the menu song
+        audioManager.Stop("MenuTheme");
+
+        // Jump to the next scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
