@@ -22,13 +22,6 @@ public class Dragon : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GameOver(){
         //anim.SetTrigger("Ataque");
         Instantiate(deathOptions, new Vector3(0, 0, 0), Quaternion.identity); 
