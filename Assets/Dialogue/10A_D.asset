@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: 10A_D
+  m_EditorClassIdentifier: 
+  lines:
+    array:
+    - speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
+      text: "A mesma coisa, \xE9 o unico tipo de comida que vem aqui pra baixo.."
+  kill: 0
+  question:
+    speaker: {fileID: 0}
+    text: 
+  options:
+  - text: "Que tal deixar eu sair com o cozinheiro?\r\ntraremos algo bom pra voc\xEA
+      comer"
+    nextDialogue: {fileID: 11400000, guid: 48d18349fc666bf4a9455e2ba6082e28, type: 2}
+  - text: "Por que n\xE3o sai daqui ent\xE3o ?"
+    nextDialogue: {fileID: 11400000, guid: 7f8ec40573313244cb116b2959e039ef, type: 2}

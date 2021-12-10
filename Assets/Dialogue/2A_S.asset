@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: 2A_S
+  m_EditorClassIdentifier: 
+  lines:
+    array:
+    - speaker: {fileID: 0}
+      text: "Pra onde dever\xEDamos ir ?"
+  kill: 0
+  question:
+    speaker: {fileID: 0}
+    text: 
+  options:
+  - text: "Em qualquer dire\xE7\xE3o, at\xE9 que n\xE3o haja mais guerra"
+    nextDialogue: {fileID: 0}

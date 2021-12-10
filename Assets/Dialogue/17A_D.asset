@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: 17A_D
+  m_EditorClassIdentifier: 
+  lines:
+    array:
+    - speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
+      text: "Humano especial te ordeno que me leve para conhecer as comidas desse
+        mundo, voc\xEA e seu amigo, subam se n\xE3o quiserem ficar pra tr\xE1s"
+  kill: 0
+  question:
+    speaker: {fileID: 0}
+    text: 
+  options:
+  - text: Convite aceito com sucesso
+    nextDialogue: {fileID: 11400000, guid: 75ae52eed375a7e47be81b3e993c2711, type: 2}
