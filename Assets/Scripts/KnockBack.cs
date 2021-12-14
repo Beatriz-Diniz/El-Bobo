@@ -15,7 +15,6 @@ public class KnockBack : MonoBehaviour
 
     //IMPORTANT: call this function on colision to aply the knock back
     public void knock(){
-        
         StartCoroutine(Knockback(time, power, this.transform));
     }
 

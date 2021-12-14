@@ -22,9 +22,9 @@ public class InimigoIA : MonoBehaviour
     private bool estaPulando;
     private bool noChao;
     private bool stun;
-
+    private bool cooldown;
+    
     private KnockBack movement;
-    private HitStop stop;
 
     private void OnEnable()
     {
@@ -36,7 +36,6 @@ public class InimigoIA : MonoBehaviour
     void Start()
     {   
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<KnockBack>();
-        stop = GameObject.FindGameObjectWithTag("Player").GetComponent<HitStop>();
     }
 
     private void Update()
@@ -73,13 +72,20 @@ public class InimigoIA : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {   
-        if(collision.gameObject.tag.Equals("Player")){
+        if(collision.gameObject.tag.Equals("Player") && cooldown == false){
+            StartCoroutine(wait());
             movement.knock();
-            stop.Stop();
             player.TakeDamage(1);
             noChao = false;
-            
         }
+    }
+
+    IEnumerator wait(){
+        cooldown = true;
+        Debug.Log(cooldown);
+        yield return new WaitForSeconds(0.7f);
+        cooldown = false;
+        Debug.Log(cooldown);
     }
 
     private void DetectaParede()

@@ -22,6 +22,12 @@ public class BoboAttack : MonoBehaviour
     
     public bool canMove = true;
 
+    public int hitCount = 0;
+    private HitStop stop;
+     void Start()
+    {   
+        stop = GameObject.FindGameObjectWithTag("Player").GetComponent<HitStop>();
+    }
     void Update()
     {
 
@@ -30,7 +36,12 @@ public class BoboAttack : MonoBehaviour
             if(Input.GetMouseButtonDown(0)){    
                 Attack();
                 attackTimer = attackCooldown;
-            } 
+            }
+            if(Input.GetMouseButtonDown(1) && hitCount > 4){
+                stop.Stop();
+                attackTimer = attackCooldown;
+                hitCount = 0;
+            }
         }else{
             attackTimer -=Time.deltaTime;
         } 
@@ -51,13 +62,14 @@ public class BoboAttack : MonoBehaviour
 
             //para acessar o script de todos os inimigos no mapa
             foreach(Collider2D target in targets){
-                Debug.Log("We hit");
+                hitCount += 1;
+                Debug.Log(hitCount);
                 target.GetComponent<LifeEnemy>().TakeDamage(attackDamage);
             }
         }
         
         
-        //StartCoroutine("Freeze");
+       // StartCoroutine("Freeze");
     }
 
     void OnDrawGizmosSelected() 

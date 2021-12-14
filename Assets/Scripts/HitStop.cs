@@ -23,7 +23,6 @@ public class HitStop : MonoBehaviour {
         waiting = true;
         ia.set_stun(true);
         yield return new WaitForSeconds(StopTime);
-        Debug.Log("Wait");
         waiting = false;
         ia.set_stun(false);
     } 

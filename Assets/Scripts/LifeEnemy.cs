@@ -24,8 +24,7 @@ public class LifeEnemy : MonoBehaviour
     }
     void Update()
     {
-        if(0 == health){
-            Debug.Log("HERE");
+        if(health <= 0){
             Destroy(inimigo);
         }
     }
@@ -38,6 +37,7 @@ public class LifeEnemy : MonoBehaviour
         if(!recovering){
             //animacao do inimigo sofrendo dano
             health -= damage;
+            
             UpdateHealthBar();
         }
     }
