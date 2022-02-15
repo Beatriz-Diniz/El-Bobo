@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: 3B_D
+  m_EditorClassIdentifier: 
+  lines:
+    array:
+    - speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
+      text: Fale um pouco mais garoto
+  kill: 0
+  question:
+    speaker: {fileID: 0}
+    text: 
+  options:
+  - text: "Ele \xE9 um soldado que est\xE1 contra esse reino"
+    nextDialogue: {fileID: 11400000, guid: a026c9c29d46b5147829f252059d5100, type: 2}
+  - text: "N\xE3o, obrigado"
+    nextDialogue: {fileID: 11400000, guid: 4f94cd236abbf2b43bc620249ac0351a, type: 2}
+  - text: "Ele \xE9 uma boa pessoa"
+    nextDialogue: {fileID: 11400000, guid: 11cd35397facf6a40b257fb19d1b4c0a, type: 2}
