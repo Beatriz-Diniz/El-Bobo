@@ -8,6 +8,9 @@ TagManager:
   - enemy
   - Enemy
   - soldado_espada
+  - plataforma
+  - ForaDeCena
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -16,9 +19,9 @@ TagManager:
   - Water
   - UI
   - enemy
-  - 
-  - 
-  - 
+  - plataforma
+  - ForaDeCena
+  - Player
   - 
   - 
   - 
@@ -44,4 +47,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fundo
+    uniqueID: 3169443217
+    locked: 0
+  - name: ground
+    uniqueID: 119205943
+    locked: 0
+  - name: Player e Inimigos
+    uniqueID: 2655868285
+    locked: 0
+  - name: UI
+    uniqueID: 2727035561
+    locked: 0
+  - name: Menu
+    uniqueID: 23674893
     locked: 0

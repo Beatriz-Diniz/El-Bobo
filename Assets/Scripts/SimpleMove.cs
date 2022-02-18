@@ -39,6 +39,12 @@ public class SimpleMove : MonoBehaviour
     //interagir com objeto
     public bool EstaInteragindo {get;set;}
 
+
+    //para teletransportar o player
+    private Vector3 startPosition;
+    private bool ForaDeCena;
+    private bool naPlataforma;
+
     public static SimpleMove instance;
     void Awake()
     {
@@ -77,16 +83,26 @@ public class SimpleMove : MonoBehaviour
 
             /*verifica se o personagem esta em contato com um objeto na layer no chao*/
             noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ground"));
-            
-           // Debug.Log("noChao: ");
-           // Debug.Log(noChao);
-            
+            ForaDeCena = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ForaDeCena"));
+            naPlataforma = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("plataforma"));
+           
+
             /*para o personagem pular*/
-            if(Input.GetButtonDown("Jump") && noChao){
+            if(Input.GetButtonDown("Jump") && (noChao || naPlataforma)){
                 //anim.SetTrigger("Pulando");
                 Debug.Log("Entrou Pulo");
                 rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
+           
+            //teletransportar o player para a ultima posicao no chao antes de cair fora da cena
+            if(noChao && !naPlataforma)
+                startPosition = transform.position;
+
+            if(!noChao && ForaDeCena){
+                TakeDamage(1);
+                transform.position = startPosition;
+            }
+
 
             /*utilizar as setas do teclado para andar*/
             float speed = Input.GetAxisRaw("Horizontal");
@@ -124,12 +140,25 @@ public class SimpleMove : MonoBehaviour
         transform.localScale = theScale;
     }
 
+    //player se mexer junto com a plataforma
+    void OnCollisionEnter2D(Collision2D col) {
+        if(col.gameObject.CompareTag("plataforma"))
+            this.transform.parent = col.transform;
+    }
+
+    //player para de ser mexer junto com a plataforma
+    void OnCollisionExit2D(Collision2D col) {
+        if(col.gameObject.CompareTag("plataforma"))
+            this.transform.parent = null;
+    }
+
     //funcao para receber dano
     public void TakeDamage(int damage){
 
         if(!recovering){
             //playerAnim.SetTrigger("hurt"); //animcao quando receber o dano
             health -= damage;
+            Debug.Log(damage);
             Debug.Log(health);
             UIManagerScript.updateLives(health);
             
@@ -141,8 +170,10 @@ public class SimpleMove : MonoBehaviour
 
     void Die(){
         Debug.Log("Morreu");
-        Destroy(gameObject);
-        Instantiate(deathOptions, new Vector3(0, 0, 0), Quaternion.identity); 
+        //desativar o bobo do jogo
+        gameObject.SetActive(false);
+        Time.timeScale = 0f;
+        deathOptions.SetActive(true); 
     }
 
     public IEnumerator Knockback(float KnockbackDuration, float KnockbackPower, Transform obj){

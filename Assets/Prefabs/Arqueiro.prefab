@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6853223849756963879}
   - component: {fileID: 6853223849756963878}
   - component: {fileID: 6853223849756963877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arqueiro
-  m_TagString: Enemy
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

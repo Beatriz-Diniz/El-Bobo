@@ -55,5 +55,21 @@ public class InimigoSoldado_espada : MonoBehaviour
             rig.AddForce(new Vector2(JumpForce*forcaHorizontal, 0), ForceMode2D.Impulse);
         }
         forcaHorizontal = forcaHorizontalPadrao;
+
+        //inimigo se mexer junto com a plataforma
+        if(collision.gameObject.CompareTag("plataforma"))
+            this.transform.parent = collision.transform;
+
+        //inimigo eh destruido se cair fora da cena
+        if(collision.gameObject.tag.Equals("ForaDeCena"))
+            Destroy(gameObject);
+    }
+
+    
+
+    //inimigo para de ser mexer junto com a plataforma
+    void OnCollisionExit2D(Collision2D collision) {
+        if(collision.gameObject.CompareTag("plataforma"))
+            this.transform.parent = null;
     }
 }

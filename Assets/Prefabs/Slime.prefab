@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1912431434596547053}
   - component: {fileID: 1912431434596547052}
   - component: {fileID: 1912431434596547054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slime
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1639099011
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7144457358068580631, guid: bb694321f9b57cf41968bd3108648220, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,12 +101,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f598e824e7067040901ef937371926f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidadeHorizontal: 1
+  velocidadeAtual: 0
   forcaPulo: 5
   layerPermitidas:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   raycastOffset: {x: 0.1, y: 0.1}
-  rangeDetectar: 2
+  rangeDetectar: 1
   modoZumbi: 1
   player: {fileID: 0}
 --- !u!114 &1912431434596547055
@@ -121,11 +123,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543a6c4d127ca2147b925f58483145e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 4
   recoveryTime: 0
   healthBar: {fileID: 2903076208767581618}
   healthBarObject: {fileID: 6889232698540173649}
   inimigo: {fileID: 1912431434596547062}
+  tempoAnimacaoMorte: 0.933
+  dano: 1
 --- !u!61 &1912431434596547056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,13 +137,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912431434596547062}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0008032322, y: -0.036893427}
+  m_Offset: {x: -0.0008032322, y: -0.045384675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -150,7 +154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32413268, y: 0.24437392}
+  m_Size: {x: 0.32413268, y: 0.22739142}
   m_EdgeRadius: 0
 --- !u!61 &1912431434596547053
 BoxCollider2D:
@@ -165,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00028657913, y: -0.047864467}
+  m_Offset: {x: -0.0011286438, y: -0.047864467}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -176,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28472662, y: 0.22886413}
+  m_Size: {x: 0.32718295, y: 0.22886413}
   m_EdgeRadius: 0
 --- !u!50 &1912431434596547052
 Rigidbody2D:
@@ -243,11 +247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 185936983050502702, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07000005
+      value: -0.168
       objectReference: {fileID: 0}
     - target: {fileID: 185936983050502702, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13
+      value: 0.183
       objectReference: {fileID: 0}
     - target: {fileID: 185936983050502702, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
       propertyPath: m_LocalPosition.z
@@ -281,9 +285,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 715408896389469112, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.028597
+      objectReference: {fileID: 0}
+    - target: {fileID: 715408896389469112, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7116
+      objectReference: {fileID: 0}
+    - target: {fileID: 715408896389469112, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0387
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214213730626661987, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311488488431762344, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311488488431762344, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1639099011
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308393150565797473, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308393150565797473, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1639099011
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839609145262254257, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.028597
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839609145262254257, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7116
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839609145262254257, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0387
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605888371224120521, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9097007729208608603, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
       propertyPath: m_Name
       value: Health Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097007729208608603, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3809979438671f547bb3a53bf3bc1406, type: 3}

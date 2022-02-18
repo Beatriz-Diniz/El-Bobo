@@ -104,10 +104,10 @@ public class Menu : MonoBehaviour
     //sair do jogo
     public void QuitGame() {  
         //no editor da unity, quando compilar o executavel, deixar essa parte comentada
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
 
         //no executavel, quando compilar na Unity, deixar essa parte comentada
-        //Application.Quit();
+        Application.Quit();
     }
 
     //abrir menu de configuracoes

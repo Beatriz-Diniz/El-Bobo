@@ -97,4 +97,24 @@ public class InimigoArqueiro : MonoBehaviour
         atirando = false;
         //canMove = true;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {   
+
+        if(collision.gameObject.tag.Equals("ForaDeCena"))
+            Destroy(gameObject);
+    }
+
+    //inimigo se mexer junto com a plataforma
+    void OnCollisionEnter2D(Collision2D col) {
+        if(col.gameObject.CompareTag("plataforma"))
+            this.transform.parent = col.transform;
+    }
+
+    //inimigo para de ser mexer junto com a plataforma
+    void OnCollisionExit2D(Collision2D col) {
+        if(col.gameObject.CompareTag("plataforma"))
+            this.transform.parent = null;
+    }
+    
 }

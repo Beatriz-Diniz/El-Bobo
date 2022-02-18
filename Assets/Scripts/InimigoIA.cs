@@ -8,8 +8,8 @@ public class InimigoIA : MonoBehaviour
     private Rigidbody2D rb;
 
     //define velocidade de movimento padrão
-    private float velocidadeHorizontal = 1f;
-    private float velocidadeAtual;
+    public float velocidadeHorizontal = 1f;
+    public float velocidadeAtual;
     public float forcaPulo;
     [SerializeField] private LayerMask layerPermitidas;
     [SerializeField] private Vector2 raycastOffset; //Valores para definir distancia do raycast
@@ -63,6 +63,7 @@ public class InimigoIA : MonoBehaviour
     public bool get_chao(){
         return noChao;
     }
+
     void anda(Vector2 direcao){
        if(get_stun() == false){
             velocidadeAtual = direcao.x * velocidadeHorizontal;
@@ -76,10 +77,11 @@ public class InimigoIA : MonoBehaviour
         if(collision.gameObject.tag.Equals("Player")){
             movement.knock();
             stop.Stop();
-            player.TakeDamage(1);
             noChao = false;
-            
         }
+
+        if(collision.gameObject.tag.Equals("ForaDeCena"))
+            Destroy(gameObject);
     }
 
     private void DetectaParede()
@@ -167,6 +169,18 @@ public class InimigoIA : MonoBehaviour
             rb.AddForce(Vector2.up * forcaPulo);
         noChao = false;
         
+    }
+
+    //inimigo se mexer junto com a plataforma
+    void OnCollisionEnter2D(Collision2D col) {
+        if(col.gameObject.CompareTag("plataforma"))
+            this.transform.parent = col.transform;
+    }
+
+    //inimigo para de ser mexer junto com a plataforma
+    void OnCollisionExit2D(Collision2D col) {
+        if(col.gameObject.CompareTag("plataforma"))
+            this.transform.parent = null;
     }
 
 }

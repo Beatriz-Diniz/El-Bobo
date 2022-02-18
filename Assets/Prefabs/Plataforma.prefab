@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 6640319485911703522}
   m_Layer: 0
   m_Name: Plataforma
-  m_TagString: Untagged
+  m_TagString: plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,9 +107,9 @@ GameObject:
   - component: {fileID: 6640319485926942720}
   - component: {fileID: 6640319485926942735}
   - component: {fileID: 6640319485926942724}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: plataforma
-  m_TagString: Untagged
+  m_TagString: plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

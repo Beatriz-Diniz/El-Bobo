@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1860005099
-  m_SortingLayer: 0
+  m_SortingLayerID: -1639099011
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3671939182539219924, guid: fd2f8d2d87f93ed4f9f5e59f18d73ea0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,7 +108,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.39}
+    oldSize: {x: 0.66, y: 0.66}
     newSize: {x: 4.4, y: 4.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -184,14 +184,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1425d20503a59474189f389296e2d340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 4
   canMove: 1
   kill: 0
-  deathOptions: {fileID: 7350951539148890964, guid: 045fabccb4b32f740953e0a1a716caa4, type: 3}
-  jumpForce: 10
-  health: 5
-  recoveryTime: 5
+  deathOptions: {fileID: 0}
+  jumpForce: 12
+  health: 10
+  recoveryTime: 0
   UIManagerScript: {fileID: 0}
+  menu: {fileID: 0}
+  isPaused: 0
 --- !u!114 &470289292367695928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,17 +207,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2158804312685815232}
-  attackPoint: {fileID: 0}
-  attackRange: 0.5
+  attackPoint: {fileID: 876021908941057262}
+  attackRange: 0.2
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 1
-  attackDamage: 0
+    m_Bits: 64
+  attackDamage: 1
   cetro: 0
-  espada: 0
+  espada: 1
   arco: 0
-  attackCooldown: 0
+  attackCooldown: 0.35
   canMove: 1
+  menu: {fileID: 0}
+  isPaused: 0
 --- !u!114 &1681898597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,8 +233,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  time: 2
-  power: 10000
+  time: 1
+  power: 10
+  inimigo: {fileID: 0}
 --- !u!1 &4295304737405900121
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +248,7 @@ GameObject:
   m_Layer: 0
   m_Name: attackPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -255,8 +260,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4295304737405900121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 0.04, z: -0.48}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.32, y: 0.04, z: -0.48}
+  m_LocalScale: {x: 0.37115648, y: 0.35679558, z: 0.57101}
   m_Children: []
   m_Father: {fileID: 2158804312685815235}
   m_RootOrder: 0

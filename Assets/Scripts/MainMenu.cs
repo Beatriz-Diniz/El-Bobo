@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject deathOptions;
+    public GameObject save;
+    private int valueSave;
     public bool morte;
 
     void Start()
@@ -29,7 +31,10 @@ public class MainMenu : MonoBehaviour
     public void OpenMenu () 
     {
         Destroy(deathOptions);
-        SceneManager.LoadScene("Menu");
+        Debug.Log("Cena atual");
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        valueSave = save.transform.GetComponent<Save>().save;
+        SceneManager.LoadScene(valueSave);
     }
     
 }
