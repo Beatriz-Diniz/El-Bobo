@@ -196,14 +196,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 711905235}
     m_Modifications:
-    - target: {fileID: 1681898597, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
-      propertyPath: rb2d
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1681898597, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
-      propertyPath: inimigo
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 470289292367695928, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
       propertyPath: menu
       value: 
@@ -214,11 +206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2158804312685815235, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -965.77
+      value: -965.84
       objectReference: {fileID: 0}
     - target: {fileID: 2158804312685815235, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -541.23
+      value: -541.357
       objectReference: {fileID: 0}
     - target: {fileID: 2158804312685815235, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -255,14 +247,6 @@ PrefabInstance:
     - target: {fileID: 2158804312685815241, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
       propertyPath: m_Name
       value: ElBoboSmall
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158804312685815244, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158804312685815244, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7721099242829376423, guid: 3dba69d0413d46d44a032b9b8b3c0ecb, type: 3}
       propertyPath: menu
@@ -777,8 +761,6 @@ GameObject:
   - component: {fileID: 617579212}
   - component: {fileID: 617579208}
   - component: {fileID: 617579211}
-  - component: {fileID: 617579213}
-  - component: {fileID: 617579214}
   m_Layer: 3
   m_Name: Tilemap
   m_TagString: ground
@@ -2572,6 +2554,48 @@ CompositeCollider2D:
         Y: -15999999
       - X: 19199998
         Y: -15999999
+    - - X: -51200004
+        Y: -16000000
+      - X: -57599996
+        Y: -16000000
+      - X: -57599996
+        Y: -25600000
+      - X: -51200004
+        Y: -25600000
+    - - X: -57600004
+        Y: -16000000
+      - X: -60800000
+        Y: -16000000
+      - X: -60800000
+        Y: -25400000
+      - X: -60600000
+        Y: -25600000
+      - X: -57600004
+        Y: -25600000
+    - - X: 67199992
+        Y: -16000000
+      - X: 60800000
+        Y: -16000000
+      - X: 60800000
+        Y: -25600000
+      - X: 67199992
+        Y: -25600000
+    - - X: -48000000
+        Y: -16000000
+      - X: -51200000
+        Y: -16000000
+      - X: -51200000
+        Y: -25600000
+      - X: -48000000
+        Y: -25600000
+    - - X: 150399984
+        Y: -16000000
+      - X: 140800000
+        Y: -16000000
+      - X: 140800000
+        Y: -28799998
+      - X: 150399984
+        Y: -28799998
     - - X: 140799984
         Y: -16000000
       - X: 131200000
@@ -2580,6 +2604,24 @@ CompositeCollider2D:
         Y: -28799998
       - X: 140799984
         Y: -28799998
+    - - X: 19199998
+        Y: -16000000
+      - X: -6400000
+        Y: -16000000
+      - X: -6400000
+        Y: -19100000
+      - X: -6300000
+        Y: -19200000
+      - X: 0
+        Y: -19200000
+      - X: 0
+        Y: -22399998
+      - X: -15999999
+        Y: -22399998
+      - X: -15999999
+        Y: -25600000
+      - X: 19199998
+        Y: -25600000
     - - X: 131199992
         Y: -16000000
       - X: 127999992
@@ -2594,14 +2636,6 @@ CompositeCollider2D:
         Y: -28799998
       - X: 131199992
         Y: -28799998
-    - - X: 67199992
-        Y: -16000000
-      - X: 60800000
-        Y: -16000000
-      - X: 60800000
-        Y: -25600000
-      - X: 67199992
-        Y: -25600000
     - - X: 60799996
         Y: -16000000
       - X: 54400000
@@ -2634,32 +2668,6 @@ CompositeCollider2D:
         Y: -25600000
       - X: 44799996
         Y: -25600000
-    - - X: 150399984
-        Y: -16000000
-      - X: 140800000
-        Y: -16000000
-      - X: 140800000
-        Y: -28799998
-      - X: 150399984
-        Y: -28799998
-    - - X: 19199998
-        Y: -16000000
-      - X: -6400000
-        Y: -16000000
-      - X: -6400000
-        Y: -19100000
-      - X: -6300000
-        Y: -19200000
-      - X: 0
-        Y: -19200000
-      - X: 0
-        Y: -22399998
-      - X: -15999999
-        Y: -22399998
-      - X: -15999999
-        Y: -25600000
-      - X: 19199998
-        Y: -25600000
     - - X: -16000000
         Y: -22399998
       - X: -25599998
@@ -2679,32 +2687,6 @@ CompositeCollider2D:
       - X: -47999996
         Y: -25600000
       - X: -41600004
-        Y: -25600000
-    - - X: -48000000
-        Y: -16000000
-      - X: -51200000
-        Y: -16000000
-      - X: -51200000
-        Y: -25600000
-      - X: -48000000
-        Y: -25600000
-    - - X: -51200004
-        Y: -16000000
-      - X: -57599996
-        Y: -16000000
-      - X: -57599996
-        Y: -25600000
-      - X: -51200004
-        Y: -25600000
-    - - X: -57600004
-        Y: -16000000
-      - X: -60800000
-        Y: -16000000
-      - X: -60800000
-        Y: -25400000
-      - X: -60600000
-        Y: -25600000
-      - X: -57600004
         Y: -25600000
   m_CompositePaths:
     m_Paths:
@@ -2754,58 +2736,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &617579213
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617579206}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.3189225, y: -1.6784488}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.5221548, y: 0.14659047}
-  m_EdgeRadius: 0
---- !u!61 &617579214
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617579206}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.2793989, y: -2.305568}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.5621257, y: 0.1331954}
-  m_EdgeRadius: 0
 --- !u!4 &632372267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8083794194594091652, guid: 7db3b40c1b7f3274aad3c6559355b939, type: 3}
