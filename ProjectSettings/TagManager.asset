@@ -11,6 +11,7 @@ TagManager:
   - plataforma
   - ForaDeCena
   - Platform
+  - checkpoint
   layers:
   - Default
   - TransparentFX
@@ -56,6 +57,9 @@ TagManager:
     locked: 0
   - name: Player e Inimigos
     uniqueID: 2655868285
+    locked: 0
+  - name: Dragoa
+    uniqueID: 762115959
     locked: 0
   - name: UI
     uniqueID: 2727035561

@@ -17,26 +17,21 @@ public class MudarCena : MonoBehaviour
         
         }
 
-        /*para mudar de cena quando interagir com uma porta*/
-        /*public void proximaCena(){
+        /*para mudar de cena quando interagir com uma porta ou quando clicar no botao*/
+        public void proximaCena(){
                 //carrega a proxima cena          
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                Destroy(gameObject);
-
-        }*/
-
-        /*para mudar de cena quando passar em um checkpoint*/
-        void OnTriggerEnter2D(Collider2D other){
-                //carrega a proxima cena     
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 Destroy(gameObject);
 
         }
 
-        /*para mudar de cena quando quando clicar no botao*/
-        public void proximaCena(){
+        /*para mudar de cena quando passar em um checkpoint*/
+        void OnTriggerEnter2D(Collider2D other){
                 //carrega a proxima cena     
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                Destroy(gameObject);  
+                if(gameObject.CompareTag("checkpoint")){
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        Destroy(gameObject);
+                }
+
         }
 }

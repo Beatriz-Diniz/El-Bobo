@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dragon : MonoBehaviour
+public class DragonD : MonoBehaviour
 {
     private static Animator anim;                      /*para manipular o animator*/
     public GameObject deathOptions;

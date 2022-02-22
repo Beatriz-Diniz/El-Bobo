@@ -11,7 +11,8 @@ public class MainMenu : MonoBehaviour
     public bool morte;
 
     void Start()
-    {
+    {   
+        Debug.Log("MENU MORTE");
         //ativar cursor do mouse
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;    
