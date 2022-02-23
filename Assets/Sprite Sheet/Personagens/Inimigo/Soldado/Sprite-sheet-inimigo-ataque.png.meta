@@ -100,10 +100,10 @@ TextureImporter:
       name: Sprite-sheet-inimigo-ataque_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 66
-        height: 66
+        x: 18
+        y: 12
+        width: 35
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,10 +121,10 @@ TextureImporter:
       name: Sprite-sheet-inimigo-ataque_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 0
-        width: 66
-        height: 66
+        x: 68
+        y: 12
+        width: 51
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
