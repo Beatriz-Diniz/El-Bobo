@@ -34,8 +34,9 @@ public class LifeEnemy : MonoBehaviour
     void Update()
     {
         //animacao de morte e destruir inimigo
-        if(0 == health){
+        if (health <= 0) {
             animator.SetTrigger("Morrendo");
+            Debug.Log("Soldado morreu por vida");
             Destroy(inimigo, tempoAnimacaoMorte);
         }
         
@@ -50,6 +51,7 @@ public class LifeEnemy : MonoBehaviour
     public void TakeDamage(int damage){
         if(!recovering){
             //animacao do inimigo sofrendo dano
+            Debug.Log("Tomou dano");
             health -= damage;
             UpdateHealthBar();
         }

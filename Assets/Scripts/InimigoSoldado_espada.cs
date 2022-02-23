@@ -61,8 +61,11 @@ public class InimigoSoldado_espada : MonoBehaviour
             this.transform.parent = collision.transform;
 
         //inimigo eh destruido se cair fora da cena
-        if(collision.gameObject.tag.Equals("ForaDeCena"))
+        if (collision.gameObject.tag.Equals("ForaDeCena"))
+        {
+            Debug.Log("Soldado Saiu da Cena");
             Destroy(gameObject);
+        }
     }
 
     
