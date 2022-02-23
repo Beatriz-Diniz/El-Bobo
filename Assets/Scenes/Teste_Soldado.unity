@@ -486,10 +486,10 @@ GameObject:
   - component: {fileID: 1872256872}
   - component: {fileID: 1872256870}
   - component: {fileID: 1872256869}
-  - component: {fileID: 1872256871}
   - component: {fileID: 1872256875}
   - component: {fileID: 1872256874}
   - component: {fileID: 1872256876}
+  - component: {fileID: 1872256871}
   m_Layer: 6
   m_Name: Soldado
   m_TagString: soldado_espada
@@ -551,17 +551,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872256868}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 353cdc360e1e36c4d9d5262c65b97abd, type: 3}
+  m_Script: {fileID: 11500000, guid: b23c340925b413a448354f954affcb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedInimigo: 2
-  vida: 3
-  JumpForce: 5
-  forcaHorizontal: 1
-  forcaHorizontalPadrao: 1
-  distancia: 0
+  attackDamage: 1
+  enragedAttackDamage: 40
+  attackOffset: {x: -0.09, y: 0, z: 0}
+  attackRange: 0.1
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!212 &1872256872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1800,7 +1801,7 @@ GameObject:
   - component: {fileID: 1650774117613628417}
   - component: {fileID: 8883540569043376030}
   - component: {fileID: 9065289247318784963}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElBoboSmall (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
