@@ -660,13 +660,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543a6c4d127ca2147b925f58483145e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recovering: 0
   health: 10
   healthBar: {fileID: 715408896889433393}
   healthBarObject: {fileID: 9097007728634313170}
   inimigo: {fileID: 1872256868}
   tempoAnimacaoMorte: 0
   dano: 0
+  recovering: 0
+  recoveryTime: 2
+  knockbackForceX: 2
+  knockbackForceY: 1
 --- !u!114 &1872256876
 MonoBehaviour:
   m_ObjectHideFlags: 0

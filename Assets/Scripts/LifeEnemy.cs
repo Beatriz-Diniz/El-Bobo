@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class LifeEnemy : MonoBehaviour
 {
-    public bool recovering = false;                 // estah invulneravel nesse tempo
-
-    //public float recoveryTime;                    // OBS: pensei em nao usar essa variavel e
-                                                    // tomar automaticamente como recoveryTime
-                                                    // o tempo da animacao do knockback
-
+    private Transform player;
     public int health;
 
     //para criar a barra de hp
@@ -25,9 +20,16 @@ public class LifeEnemy : MonoBehaviour
 
     public int dano;                                //dano que o inimigo vai dar no player
 
+    private Rigidbody2D rb;
+    [HideInInspector] public bool recovering = false;         // estah invulneravel nesse tempo
+    public float recoveryTime;
+    public float knockbackForceX;
+    public float knockbackForceY;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
         healthBarScale = healthBar.localScale;
         healthPercent = healthBarScale.x/health;
         animator = gameObject.GetComponent<Animator>();
@@ -53,15 +55,14 @@ public class LifeEnemy : MonoBehaviour
         healthBar.localScale = healthBarScale;
     }
 
-    public void TakeDamage(int damage) {
-        if(!recovering) 
+    public void TakeDamage(int damage) 
+    {
+        if (!recovering) 
         {
+            recovering = true;
             //animacao do inimigo sofrendo dano
-            GetComponent<Animator>().SetTrigger("Knockback");
-
-            Debug.Log("Tomou dano");
-            health -= damage;
-            UpdateHealthBar();
+            //GetComponent<Animator>().SetTrigger("Knockback");
+            StartCoroutine(Knockback(damage));
         }
     }
     
@@ -71,5 +72,28 @@ public class LifeEnemy : MonoBehaviour
         {
             other.gameObject.GetComponent<SimpleMove>().TakeDamage(dano);
         }
+    }
+
+    public IEnumerator Knockback (int damage)
+    {
+        if (rb != null)
+        {
+            recovering = true;
+            rb.velocity = Vector2.zero;
+
+            if (rb.transform.position.x < player.position.x)
+            {
+                rb.AddForce(new Vector2(-knockbackForceX, knockbackForceX), ForceMode2D.Impulse);
+            }
+            else
+            {
+                rb.AddForce(new Vector2(knockbackForceX, knockbackForceX), ForceMode2D.Impulse);
+            }
+            health -= damage;
+            UpdateHealthBar();
+                        
+            yield return new WaitForSeconds(recoveryTime);
+            recovering = false;
+        }        
     }
 }
