@@ -627,7 +627,7 @@ Transform:
   m_Children:
   - {fileID: 185936982543187111}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1872256874
 Animator:
@@ -660,8 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543a6c4d127ca2147b925f58483145e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  recoveryTime: 0
+  recovering: 0
+  health: 10
   healthBar: {fileID: 715408896889433393}
   healthBarObject: {fileID: 9097007728634313170}
   inimigo: {fileID: 1872256868}
@@ -1701,7 +1701,7 @@ Transform:
   - {fileID: 8207284491547388744}
   - {fileID: 3452468768119500290}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6934414913252958822
 Animator:
@@ -6530,7 +6530,7 @@ RectTransform:
   - {fileID: 6083503563743046084}
   - {fileID: 6083503562802413816}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
