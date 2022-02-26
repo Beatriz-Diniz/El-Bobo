@@ -364,14 +364,14 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Castle
-    clip: {fileID: 8300000, guid: 1f3cb623d640bc243b89f514853ad9c4, type: 3}
+    clip: {fileID: 8300000, guid: 8e0b33d7995b6294fa5b94abdd5a4367, type: 3}
     output: {fileID: 24300002, guid: f308fd7e31f27ca4e8dd8648c99d89dd, type: 2}
     volume: 0.58
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Dragon
-    clip: {fileID: 8300000, guid: 8e0b33d7995b6294fa5b94abdd5a4367, type: 3}
+    clip: {fileID: 8300000, guid: 1f3cb623d640bc243b89f514853ad9c4, type: 3}
     output: {fileID: 24300002, guid: f308fd7e31f27ca4e8dd8648c99d89dd, type: 2}
     volume: 0.58
     pitch: 1

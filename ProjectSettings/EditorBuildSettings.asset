@@ -6,22 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Preload.unity
+    guid: 1bcc933d672a79f449241337f2753159
+  - enabled: 1
     path: Assets/Scenes/Cutscene1.unity
     guid: ed21f5e7b2c0fb84db1379c0b9c49d50
   - enabled: 1
-    path: Assets/Scenes/1-FaseFloresta.unity
+    path: Assets/Scenes/_1FaseFloresta.unity
     guid: f8406fce4554c4d40800cc63e6439062
   - enabled: 1
-    path: Assets/Scenes/2-FaseFloresta.unity
+    path: Assets/Scenes/_2FaseFloresta.unity
     guid: 12cf2f9d76d8cc848a7e450c3304737b
   - enabled: 1
-    path: Assets/Scenes/3-FaseCastelo.unity
+    path: Assets/Scenes/_3FaseCastelo.unity
     guid: 6320e321ad1a37f4eae5103ab0cad79c
   - enabled: 0
     path: Assets/Scenes/Cutscene 2.unity
     guid: c1e5f5d377d5573458925d9a41d5335c
   - enabled: 1
-    path: Assets/Scenes/4-Boss.unity
+    path: Assets/Scenes/_4Boss.unity
     guid: d58cd0c5c174e34459c8f1c89fd046d2
   - enabled: 0
     path: Assets/Scenes/Menu.unity

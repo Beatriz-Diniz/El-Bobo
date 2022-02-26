@@ -45,8 +45,7 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogWarning("Sound:" + name + " not found to PLAY!");
             return;
-        }         
-
+        }
         
         // Play the sound found
         s.source.Play();
@@ -67,6 +66,15 @@ public class AudioManager : MonoBehaviour
 
         // Stop the sound found
         s.source.Stop();
+    }
+
+    // Stop any sound playing
+    public void StopAll ()
+    {
+        foreach (Sound sound in sounds)
+        {
+            sound.source.Stop();
+        }
     }
 
     // Stop the sound with the 'name' passed by parameter
