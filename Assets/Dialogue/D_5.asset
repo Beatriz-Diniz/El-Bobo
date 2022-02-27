@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: D_5
+  m_EditorClassIdentifier: 
+  lines:
+    array: []
+  kill: 0
+  question:
+    speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
+    text: ...
+  options:
+  - text: "Ent\xE3o, bai\xE3o de dois \xE9 uma mistura de arroz, feij\xE3o, queijo
+      e muito amor."
+    nextDialogue: {fileID: 11400000, guid: 0ae319b7dee2d7148b4a8b15616f2f14, type: 2}

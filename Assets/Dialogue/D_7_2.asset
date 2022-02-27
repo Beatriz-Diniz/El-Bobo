@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: D_7_2
+  m_EditorClassIdentifier: 
+  lines:
+    array: []
+  kill: 0
+  question:
+    speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
+    text: "Voc\xEA tem raz\xE3o."
+  options:
+  - text: "Caraca, tu ca\xEDste que nem patinho n\xE9 kkk"
+    nextDialogue: {fileID: 11400000, guid: 32a359577966d114faf4beba297544a3, type: 2}
+  - text: "N\xE3o se arrepender\xE1s <3"
+    nextDialogue: {fileID: 0}
