@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: 4A_D
+  m_EditorClassIdentifier: 
+  lines:
+    array:
+    - speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
+      text: "N\xE3o tenho motivos para salva-lo"
+  kill: 0
+  question:
+    speaker: {fileID: 0}
+    text: 
+  options:
+  - text: "Ele \xE9 um \xF3timo soldado"
+    nextDialogue: {fileID: 11400000, guid: 49b1ba61f15c04141b59054ecd64374e, type: 2}
+  - text: "Ele \xE9 um bom cozinheiro"
+    nextDialogue: {fileID: 11400000, guid: cec1e44382f550f4bb53cd8388552e71, type: 2}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed286eddf84cd02f28e4734b5f749b27, type: 3}
+  m_Name: 8A_D
+  m_EditorClassIdentifier: 
+  lines:
+    array:
+    - speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
+      text: "Hoje em dia eles colocam hidromel das montanhas nisso ?\r\nhumanos s\xE3o
+        estranhos, eles mudam as coisas que j\xE1 est\xE3o boas, como se fosse para
+        corrigi-las"
+  kill: 0
+  question:
+    speaker: {fileID: 0}
+    text: 
+  options:
+  - text: "Voc\xEA conhece bastante sobre comidas, seria inteligente n\xE3o comer
+      o cozinheiro"
+    nextDialogue: {fileID: 11400000, guid: 293351fe0995dd64abd4eedbbb0e7a6a, type: 2}
+  - text: "Voc\xEA tem acesso a v\xE1rios tipos de comidas aqui em baixo?"
+    nextDialogue: {fileID: 11400000, guid: 265de9c9f9f736e43943d79588aa3a25, type: 2}
