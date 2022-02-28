@@ -7,15 +7,21 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject deathOptions;
     public GameObject save;
+    public GameObject menu;
     private int valueSave;
     public bool morte;
 
     void Start()
     {   
         Debug.Log("MENU MORTE");
+        menu.SetActive(false); 
         //ativar cursor do mouse
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;    
+    }
+
+    void Update(){
+        menu.SetActive(false); 
     }
     
     public void PlayGame ()

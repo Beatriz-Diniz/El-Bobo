@@ -65,7 +65,7 @@ public class SimpleMove : MonoBehaviour
         if(canMove == true && isPaused == false){
             
             //interagir com objeto, tecla f
-            if(Input.GetKeyDown(KeyCode.F)){
+            if(Input.GetKeyDown(KeyCode.V)){
                 Debug.Log("Interagiu");
                 EstaInteragindo = true;
             }else{
@@ -170,6 +170,7 @@ public class SimpleMove : MonoBehaviour
 
     void Die(){
         Debug.Log("Morreu");
+        UIManagerScript.updateLives(0);
         //desativar o bobo do jogo
         gameObject.SetActive(false);
         Time.timeScale = 0f;

@@ -28,11 +28,14 @@ public class Menu : MonoBehaviour
     public GameObject mainMenu;
     public bool morte;
 
+    public MudarCena transicao;
+    public GameObject tra;
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1f;
-
+        transicao = GameObject.FindObjectOfType<MudarCena>();
+        morte = mainMenu.transform.GetComponent<MainMenu>().morte;
         //limpar o botao Dropdown
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
@@ -76,13 +79,13 @@ public class Menu : MonoBehaviour
 
     public void PauseButton(){
 
-        if(pausePanel.activeSelf)
+        if(pausePanel.activeSelf && morte == false)
             pausePanel.SetActive(false);
 
-        if(!optionsPanel.activeSelf && !pausePanel.activeSelf)
+        if(!optionsPanel.activeSelf && !pausePanel.activeSelf && morte == false)
             PauseScreen();
         
-        if(optionsPanel.activeSelf)
+        if(optionsPanel.activeSelf && morte == false)
             BacktoMenu();
     }
 
@@ -106,6 +109,12 @@ public class Menu : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f;
         pausePanel.SetActive(false);
+    }
+
+    public void Iniciar(){
+        Debug.Log("Entrou Iniciar");
+        //tra.SetActive(true);
+        transicao.IniciaTransicao();
     }
 
 

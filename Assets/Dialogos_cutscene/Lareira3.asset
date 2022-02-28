@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd40377a53aebe47a85567f4b3fccff, type: 3}
+  m_Name: Lareira3
+  m_EditorClassIdentifier: 
+  Falas:
+  - Personagem: {fileID: 11400000, guid: 132707a896d04df469aaba0e6278672e, type: 2}
+    TextoDasFalas:
+    - "Eu estava pensando\u2026 Independente do que n\xF3s fa\xE7amos, ainda estaremos
+      condicionado a guerra enquanto vivermos aqui\u2026\r\n"
+  - Personagem: {fileID: 11400000, guid: cb7ac98ff3cf46c4eb1dccee89a9549b, type: 2}
+    TextoDasFalas:
+    - "Pois \xE9. Desde a adolesc\xEAncia estamos no ex\xE9rcito. Apesar de n\xE3o
+      querer mais guerra, n\xE3o sei o que \xE9 viver sem guerra.\r\n"
+  - Personagem: {fileID: 11400000, guid: 132707a896d04df469aaba0e6278672e, type: 2}
+    TextoDasFalas:
+    - "Bom, o mundo com certeza \xE9 maior do que esses dois reinos. H\xE1 de ter
+      um canto onde reina paz tamb\xE9m."
+  - Personagem: {fileID: 11400000, guid: cb7ac98ff3cf46c4eb1dccee89a9549b, type: 2}
+    TextoDasFalas:
+    - "H\xE1 tempos protejo este reino. Mas serei s\xF3 mais um a se sacrificar pelo
+      rei. Minha fam\xEDlia de sangue j\xE1 se foi\u2026 Creio que paz seria bom."
+  - Personagem: {fileID: 11400000, guid: 132707a896d04df469aaba0e6278672e, type: 2}
+    TextoDasFalas:
+    - "Quando encontrarmos um lugar seguro, iremos para l\xE1."
+  - Personagem: {fileID: 11400000, guid: cb7ac98ff3cf46c4eb1dccee89a9549b, type: 2}
+    TextoDasFalas:
+    - Promete?
+  - Personagem: {fileID: 11400000, guid: 132707a896d04df469aaba0e6278672e, type: 2}
+    TextoDasFalas:
+    - Prometo.

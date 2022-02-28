@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Malee;
+using UnityEngine.SceneManagement;
 
 namespace Fog.Dialogue
 {
@@ -50,7 +51,7 @@ namespace Fog.Dialogue
             DialogueHandler.instance.OnDialogueStart -= BeforeDialogue;
         }
         [SerializeField] private bool kill;
-
+        [SerializeField] private bool win;
         public virtual void AfterDialogue(){
 			if(Agent.Instance){
 				// Input cooldown is needed because it uses the same "Interactable" button
@@ -61,9 +62,12 @@ namespace Fog.Dialogue
 
                 if(movement != null){
                     movement.canMove = true;
-                    if(kill == true){
+                    if(kill == true)
                         Dragon.ataque = true;
-                    }
+                    
+                    if(win == true)
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    
                 }
 			}
             DialogueHandler.instance.OnDialogueEnd -= AfterDialogue;

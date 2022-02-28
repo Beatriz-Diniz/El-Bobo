@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1611605375238161001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.489, y: -2.779, z: 0}
-  m_LocalScale: {x: 0.4541, y: 0.4224, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1497735222650610090}
   m_Father: {fileID: 0}
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: -7589361700487199329, guid: 44558aab51f13de42b4123d5971f3e45, type: 3}
+  m_SortingLayerID: -1639099011
+  m_SortingLayer: 3
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 8389054599439809389, guid: d52ba2a6aca6ca043b67378ab21374ad, type: 3}
   m_Color: {r: 0.9716981, g: 0.8021093, b: 0.8021093, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -123,18 +123,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018870212, y: 0.016905397}
+  m_Offset: {x: 0.01470305, y: -0.09929633}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.44}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28292775, y: 0.4522649}
+  m_Size: {x: 0.35007426, y: 0.443501}
   m_EdgeRadius: 0
 --- !u!114 &1611605375238160998
 MonoBehaviour:
@@ -148,13 +148,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543a6c4d127ca2147b925f58483145e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  recoveryTime: 0
+  health: 6
   healthBar: {fileID: 2283384476149592124}
   healthBarObject: {fileID: 7521718193808549087}
   inimigo: {fileID: 1611605375238161001}
   tempoAnimacaoMorte: 0
-  dano: 0
+  dano: 2
+  recovering: 0
+  recoveryTime: 0
+  knockbackForceX: 0.5
+  knockbackForceY: 0
 --- !u!95 &1611605375238160999
 Animator:
   serializedVersion: 3
@@ -200,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23c340925b413a448354f954affcb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 1
+  attackDamage: 2
   enragedAttackDamage: 40
   attackOffset: {x: -0.09, y: 0, z: 0}
   attackRange: 0.1
@@ -275,8 +278,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1639099011
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ef90f3c0a412c534d8bf93c3407e97e8, type: 3}
   m_Color: {r: 0.9339623, g: 0.16109875, b: 0.09251513, a: 1}
@@ -357,8 +360,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1639099011
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ef90f3c0a412c534d8bf93c3407e97e8, type: 3}
   m_Color: {r: 0, g: 0.8490566, b: 0.02298562, a: 1}

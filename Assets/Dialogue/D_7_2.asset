@@ -15,6 +15,7 @@ MonoBehaviour:
   lines:
     array: []
   kill: 0
+  win: 0
   question:
     speaker: {fileID: 11400000, guid: 68607b1c0e48f4c4e99e9e23f56ff493, type: 2}
     text: "Voc\xEA tem raz\xE3o."
@@ -22,4 +23,4 @@ MonoBehaviour:
   - text: "Caraca, tu ca\xEDste que nem patinho n\xE9 kkk"
     nextDialogue: {fileID: 11400000, guid: 32a359577966d114faf4beba297544a3, type: 2}
   - text: "N\xE3o se arrepender\xE1s <3"
-    nextDialogue: {fileID: 0}
+    nextDialogue: {fileID: 11400000, guid: 6e4255566d40c8a48a594c260ffd08ad, type: 2}

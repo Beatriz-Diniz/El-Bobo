@@ -124,12 +124,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 8
-  recoveryTime: 0
   healthBar: {fileID: 3192039614935100768}
   healthBarObject: {fileID: 6601947007586859395}
   inimigo: {fileID: 2202252733841287460}
   tempoAnimacaoMorte: 0.933
   dano: 2
+  recovering: 0
+  recoveryTime: 0
+  knockbackForceX: 0
+  knockbackForceY: 0
 --- !u!61 &2202252733841287458
 BoxCollider2D:
   m_ObjectHideFlags: 0

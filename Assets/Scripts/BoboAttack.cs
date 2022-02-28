@@ -31,7 +31,7 @@ public class BoboAttack : MonoBehaviour
         isPaused = menu.transform.GetComponent<Menu>().isPaused;
         //se o attack nao esta em cooldown
         if(attackTimer <= 0 && isPaused == false){
-            if(Input.GetMouseButtonDown(0)){    
+            if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.C)){    
                 Attack();
                 attackTimer = attackCooldown;
             } 

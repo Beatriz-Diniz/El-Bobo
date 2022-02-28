@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd40377a53aebe47a85567f4b3fccff, type: 3}
+  m_Name: Lareira2
+  m_EditorClassIdentifier: 
+  Falas:
+  - Personagem: {fileID: 11400000, guid: b7208990ec755c1408ba017dfe2450ae, type: 2}
+    TextoDasFalas:
+    - 'Sabe, apesar de tudo, ainda gosto de pensar que estou protegendo nosso povo.
+
+'
+  - Personagem: {fileID: 11400000, guid: 41b7327fc2c565745899560e0a6b506e, type: 2}
+    TextoDasFalas:
+    - "\u2026 Gael, aquele que protege. Pelo jeito n\xE3o conseguiu fugir do seu
+      nome, n\xE9?\r\n"
+  - Personagem: {fileID: 11400000, guid: cb7ac98ff3cf46c4eb1dccee89a9549b, type: 2}
+    TextoDasFalas:
+    - "Hahahaha! Pelo futuro que voc\xEA escolheu, voc\xEA tamb\xE9m n\xE3o. Isaac,
+      filho da alegria."
+  - Personagem: {fileID: 11400000, guid: 132707a896d04df469aaba0e6278672e, type: 2}
+    TextoDasFalas:
+    - Hahaha! Sim.
