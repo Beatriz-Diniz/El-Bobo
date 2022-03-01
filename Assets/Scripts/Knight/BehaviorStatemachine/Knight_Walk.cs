@@ -11,9 +11,12 @@ public class Knight_Walk : StateMachineBehaviour
     Rigidbody2D rb;
     Knight knight;
 
+    private LifeEnemy lifeEnemy;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        lifeEnemy = FindObjectOfType<LifeEnemy>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         knight = animator.GetComponent<Knight>();
@@ -21,7 +24,7 @@ public class Knight_Walk : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
+    {        
         knight.LookAtPlayer();
 
         Vector2 target = new Vector2(player.position.x, rb.position.y);
@@ -32,7 +35,7 @@ public class Knight_Walk : StateMachineBehaviour
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
             animator.SetTrigger("Attack");
-        }
+        }        
     }
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

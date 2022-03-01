@@ -4664,16 +4664,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543a6c4d127ca2147b925f58483145e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
   healthBar: {fileID: 2283384477039054748}
   healthBarObject: {fileID: 7521718193086880639}
   inimigo: {fileID: 1611605375422447049}
   tempoAnimacaoMorte: 0
   dano: 2
   recovering: 0
-  recoveryTime: 1
+  recoveryTime: 1.5
   knockbackForceX: 5
-  knockbackForceY: 2
+  knockbackForceY: 5
 --- !u!95 &1611605375422447047
 Animator:
   serializedVersion: 3
@@ -4801,9 +4801,9 @@ MonoBehaviour:
   tempoAnimacaoMorte: 0
   dano: 2
   recovering: 0
-  recoveryTime: 0.5
-  knockbackForceX: 0.5
-  knockbackForceY: 0
+  recoveryTime: 1
+  knockbackForceX: 2
+  knockbackForceY: 1
 --- !u!95 &1611605375951456081
 Animator:
   serializedVersion: 3
