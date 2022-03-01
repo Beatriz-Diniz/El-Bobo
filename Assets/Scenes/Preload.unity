@@ -357,7 +357,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Forest
-    clip: {fileID: 8300000, guid: df8d6e24ebfb1e849b31aba42a30b1e8, type: 3}
+    clip: {fileID: 8300000, guid: 3c90aa78a5bb42c4589ac9ca385fa750, type: 3}
     output: {fileID: 24300002, guid: f308fd7e31f27ca4e8dd8648c99d89dd, type: 2}
     volume: 0.58
     pitch: 1
@@ -372,6 +372,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Dragon
     clip: {fileID: 8300000, guid: 1f3cb623d640bc243b89f514853ad9c4, type: 3}
+    output: {fileID: 24300002, guid: f308fd7e31f27ca4e8dd8648c99d89dd, type: 2}
+    volume: 0.58
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Bonfire
+    clip: {fileID: 8300000, guid: 7ec529ce1e1453b4497c18f1f229b18f, type: 3}
     output: {fileID: 24300002, guid: f308fd7e31f27ca4e8dd8648c99d89dd, type: 2}
     volume: 0.58
     pitch: 1

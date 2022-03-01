@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JustPlayMusic : MonoBehaviour
 {
-    public enum Type { MainMenu, Forest, Castle, Dragon };
+    public enum Type { MainMenu, Forest, Castle, Dragon, Bonfire };
     public Type songName;
 
     AudioManager audioManager;
