@@ -23,6 +23,7 @@ public class InimigoIA : MonoBehaviour
     private bool noChao;
     private bool stun;
 
+    private LifeEnemy lifeEnemy;
     private KnockBack movement;
     private HitStop stop;
 
@@ -35,6 +36,7 @@ public class InimigoIA : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
+        lifeEnemy = GetComponent<LifeEnemy>();
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<KnockBack>();
         stop = GameObject.FindGameObjectWithTag("Player").GetComponent<HitStop>();
     }
@@ -48,10 +50,13 @@ public class InimigoIA : MonoBehaviour
     
     void FixedUpdate()
     {
-        //define a velocidade
-        Vector2 vel = rb.velocity;
-        vel.x = velocidadeAtual;
-        rb.velocity = vel;     
+        if (!lifeEnemy.recovering)
+        {
+            //define a velocidade
+            Vector2 vel = rb.velocity;
+            vel.x = velocidadeAtual;
+            rb.velocity = vel;
+        }
     }
     public void set_stun(bool hitstun){
         stun = hitstun;
